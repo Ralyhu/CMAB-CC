@@ -85,7 +85,7 @@ datasets = {
 def create_parser():
     parser = args.ArgumentParser()
     parser.add_argument('-d', '--dataset_name', help="Name of the dataset", type=str, required=True)
-    parser.add_argument('-b', '--bandit', help="Bandit algorithm", choices=["cc-clcb","cc-clcb-m", "global-clcb", "global-clcb-m", "eg", "eg-fixed", "pe", "cts", "pcexp-clcb"], default="eg")
+    parser.add_argument('-b', '--bandit', help="Bandit algorithm", choices=["cc-clcb","cc-clcb-m", "global-clcb", "global-clcb-m", "eg", "eg-fixed", "pe", "cts", "pcexp-clcb"], default="cc-clcb")
     parser.add_argument("-eps", "--exploration_probability", help="exploration probability for epsilon-greedy CMAB algorithm", type=float, default=constants.default_exploration_probability)
     parser.add_argument("-o", "--oracle", help="Oracle to use in CMAB framework", choices=["pivot", "charikar"], default="pivot")
     parser.add_argument("-T", "--timesteps", help="Number of timesteps to run the selected bandit algorithm", type=int, default=constants.default_T)

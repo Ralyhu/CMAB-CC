@@ -10,7 +10,7 @@ Please cite the above paper in any research publication you may produce using th
 
 
 ## Folders
-- datasets:  contains the original data as well as the preprocessed data (as described in the paper). Biggest networks (to be unzipped in datasets folder) can be downloaded at the following [link](https://drive.google.com/open?id=1r0krGQMm0QyUAbJlGZSxTmm2ULaajBKI)
+- datasets:  contains the original data as well as the preprocessed data (as described in the paper). Biggest networks (to be unzipped in datasets folder) can be downloaded at the following [link](https://drive.google.com/file/d/18PwfSVlNC2U5AmokNCcepmxHjLLQ4GG6/view?usp=share_link)
 - code: it contains this project code
 - output: it stores all results produced by the algorithms 
 
@@ -23,8 +23,11 @@ run_CMAB.py [-h] -d DATASET_NAME [-b {cc-clcb,cc-clcb-m,global-clcb,global-clcb-
                    [-r RUNS] [-s SEED]                            
 ```
 ### Dependencies
-- numpy
-- python-igraph
+- networkx==2.6.3
+- numpy==1.22.1
+- PuLP==2.6.0
+- python_igraph==0.9.9
+- scipy==1.7.3
 
 
 ### Positional arguments
@@ -36,15 +39,17 @@ run_CMAB.py [-h] -d DATASET_NAME [-b {cc-clcb,cc-clcb-m,global-clcb,global-clcb-
 ```                                          
   -h, --help            show this help message and exit
   -b {cc-clcb,cc-clcb-m,global-clcb,global-clcb-m,eg,eg-fixed,pe,cts,pcexp-clcb}, --bandit {cc-clcb,cc-clcb-m,global-clcb,global-clcb-m,eg,eg-fixed,pe,cts,pcexp-clcb}
-                        Bandit algorithm
+                        Bandit algorithm (default value cc-clcb)
   -eps EXPLORATION_PROBABILITY, --exploration_probability EXPLORATION_PROBABILITY
-                        exploration probability for epsilon-greedy CMAB algorithm
+                        exploration probability for epsilon-greedy CMAB algorithm (default value 0.1)
   -o {pivot,charikar}, --oracle {pivot,charikar}
-                        Oracle to use in each CMAB step
+                        Oracle to use in each CMAB step (default value pivot)
   -T TIMESTEPS, --timesteps TIMESTEPS
-                        Number of timesteps to run the selected bandit algorithm
-  -r RUNS, --runs RUNS  Number of bandit runs
-  -s SEED, --seed SEED  Random generation seed -- for reproducibility (default value 100)            
+                        Number of timesteps/rounds to run the selected bandit algorithm (default value 400)
+  -r RUNS, --runs RUNS  Number of (independent) bandit runs (default value 5)
+  -s SEED, --seed SEED  Random generation seed -- for reproducibility (default value 100)  
+
+  Modify the file "constants.py" to change the default values for the parameters.          
                     
 ```
 
