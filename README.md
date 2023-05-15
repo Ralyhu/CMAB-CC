@@ -4,7 +4,7 @@
 
 This project is developed as part of the following research paper:
 
-F. Gullo, D. Mandaglio, A. Tagarelli (2023). *A Combinatorial Multi-Armed Bandit Approach to Correlation Clustering* Data Mining and Knowledge Discovery, 2023
+F. Gullo, D. Mandaglio, A. Tagarelli (2023). *A Combinatorial Multi-Armed Bandit Approach to Correlation Clustering* published in Data Mining and Knowledge Discovery (DAMI), 2023
 
 Please cite the above paper in any research publication you may produce using this code or data/analysis derived from it.
 
@@ -19,7 +19,7 @@ Please cite the above paper in any research publication you may produce using th
 From the folder 'CMAB-CC/code', run the following command:
 ```bash      
 
-run_CMAB.py [-h] [-d DATASET_NAME] [-b {cc-clcb,cc-clcb-m,global-clcb,global-clcb-m,eg,eg-fixed,pe,cts,pcexp-clcb}] [-eps EXPLORATION_PROBABILITY] [-o {pivot,charikar}] [-T TIMESTEPS]
+run_CMAB.py [-h] -d DATASET_NAME [-b {cc-clcb,cc-clcb-m,global-clcb,global-clcb-m,eg,eg-fixed,pe,cts,pcexp-clcb}] [-eps EXPLORATION_PROBABILITY] [-o {pivot,charikar}] [-T TIMESTEPS]
                    [-r RUNS] [-s SEED]                            
 ```
 ### Dependencies
