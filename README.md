@@ -12,7 +12,8 @@ Please cite the above paper in any research publication you may produce using th
 ## Folders
 - datasets:  contains the original data as well as the preprocessed data (as described in the paper). Biggest networks (to be unzipped in datasets folder) can be downloaded at the following [link](https://drive.google.com/file/d/18PwfSVlNC2U5AmokNCcepmxHjLLQ4GG6/view?usp=share_link)
 - code: it contains this project code
-- output: it stores all results produced by the algorithms 
+- output: it stores all results produced by the algorithms for each round/run, e.g. "avg_expected_lossses.txt" contains a row for each indipendent cmab run and each row contains, for each t=0,...,T-1 (separated with ";"), the expected cumulative (up to round t) average disagreement of the yielded clusterings.
+  - 
 
 ## Usage
 
